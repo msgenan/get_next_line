@@ -6,7 +6,7 @@
 /*   By: mugenan <mugenan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 17:20:45 by mugenan           #+#    #+#             */
-/*   Updated: 2024/12/18 21:17:46 by mugenan          ###   ########.fr       */
+/*   Updated: 2024/12/26 17:38:17 by mugenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char	*get_swap(char *getline)
 	return (returnline);
 }
 
-char	*get_update(char *putline)
+char	*get_update(char *getline)
 {
 	char	*buffer;
 	int		i;
@@ -91,23 +91,23 @@ char	*get_update(char *putline)
 
 	i = 0;
 	j = 0;
-	while (putline[i] != '\0' && putline[i] != '\n')
+	while (getline[i] != '\0' && getline[i] != '\n')
 		i++;
-	if (!putline[i])
+	if (!getline[i])
 	{
-		free(putline);
+		free(getline);
 		return (NULL);
 	}
-	buffer = malloc(sizeof(char) * (ft_strlen(putline) - i));
+	buffer = malloc(sizeof(char) * (ft_strlen(getline) - i));
 	if (!buffer)
 		return (NULL);
 	i++;
-	while (putline[i + j] != '\0')
+	while (getline[i + j] != '\0')
 	{
-		buffer[j] = putline[i + j];
+		buffer[j] = getline[i + j];
 		j++;
 	}
 	buffer[j] = '\0';
-	free(putline);
+	free(getline);
 	return (buffer);
 }
