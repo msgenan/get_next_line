@@ -6,7 +6,7 @@
 /*   By: mugenan <mugenan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 18:44:32 by mugenan           #+#    #+#             */
-/*   Updated: 2025/02/19 01:08:10 by mugenan          ###   ########.fr       */
+/*   Updated: 2025/02/19 03:29:41 by mugenan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*get_next_line(int fd)
 	}
 	returnline = get_swap(getline);
 	getline = get_update(getline);
-	if(!getline || getline[0] == '\0')
+	if (!getline || getline[0] == '\0')
 	{
 		free(getline);
 		getline = NULL;
