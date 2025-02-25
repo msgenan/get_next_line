@@ -1,0 +1,2 @@
+get_next_line is a project designed to implement a function that reads a line of text from a file descriptor. The goal of this project is to master the concept of buffered input and file reading,
+specifically in situations where the input data may span multiple reads. This function reads a file (or standard input) one line at a time, ensuring the reading is efficient and that each line is returned correctly.
